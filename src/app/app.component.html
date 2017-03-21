@@ -1,11 +1,13 @@
 <div class="row columns">
   <button (click)="login()" *ngIf="!name">Login With Facebook</button>
+  <button (click)="logout()" *ngIf="name">Logout of MBz Chat</button>
 
-  <input type="text" id="message" *ngIf="name" placeholder="Chat here..." (keyup.enter)="chatSend($event.target.value)" [(ngModel)]="msgVal" />
+
 
     <div class="chat-container" *ngFor="let item of items | async">
       <a href="#">{{item.name}}</a>
 
       <p>{{item.message}}</p>
     </div>
+      <input type="text" id="message" *ngIf="name" placeholder="Chat here..." (keyup.enter)="chatSend($event.target.value)" [(ngModel)]="msgVal" />
 </div>

@@ -37,6 +37,11 @@ export class AppComponent {
     });
   }
 
+//Logout method
+  logout(){
+    this.af.auth.logout()
+  }
+
   chatSend(theirMessage: string){
     //Store message and user name in object
     this.items.push({message:theirMessage, name: this.name.facebook.displayName})
