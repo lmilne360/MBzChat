@@ -1,5 +1,6 @@
 <div class="row columns">
-  <button (click)="login()" *ngIf="!name">Login With Facebook</button>
+  <button (click)="loginFB()" *ngIf="!name">Login With Facebook</button>
+  <button (click)="loginGoogle()" *ngIf="!name">Login With Google</button>
   <button (click)="logout()" *ngIf="name">Logout of MBz Chat</button>
 
 

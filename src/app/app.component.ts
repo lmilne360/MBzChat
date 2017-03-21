@@ -30,12 +30,21 @@ export class AppComponent {
 // Create a login method
 //Set prodiver to Facebook
 // Set  to popup instead of redirect to facebook
-  login() {
+  loginFB() {
     this.af.auth.login({
       provider: AuthProviders.Facebook,
       method: AuthMethods.Popup,
     });
   }
+
+  //Google login method
+  loginGoogle() {
+    this.af.auth.login({
+      provider: AuthProviders.Google,
+      method: AuthMethods.Popup,
+    })
+  }
+
 
 //Logout method
   logout(){
@@ -45,7 +54,7 @@ export class AppComponent {
 
   chatSend(theirMessage: string){
     //Store message and user name in object
-    this.items.push({message:theirMessage, name: this.name.facebook.displayName})
+    this.items.push({message:theirMessage, name: this.name.auth.displayName })//this.name.facebook.displayName
     this.msgVal = '';
   }
 
