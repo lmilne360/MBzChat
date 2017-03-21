@@ -1,0 +1,9 @@
+<div class="form-container">
+    <img src="src/app/assets/images/lock.svg" id="lock">
+    <span class="error" *ngIf="error">{{ error }}</span>
+
+
+  <button (click)="loginFB()" id="fb">Login With Facebook</button><br>
+  <button (click)="loginGoogle()" id="google">Login With Google</button>
+
+</div>

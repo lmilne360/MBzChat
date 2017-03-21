@@ -1,14 +1,1 @@
-<div class="row columns">
-  <button (click)="loginFB()" *ngIf="!name">Login With Facebook</button>
-  <button (click)="loginGoogle()" *ngIf="!name">Login With Google</button>
-  <button (click)="logout()" *ngIf="name">Logout of MBz Chat</button>
-
-
-
-    <div class="chat-container" *ngFor="let item of items | async">
-      <a href="#">{{item.name}}</a>
-
-      <p>{{item.message}}</p>
-    </div>
-      <input type="text" id="message" *ngIf="name" placeholder="Chat here..." (keyup.enter)="chatSend($event.target.value)" [(ngModel)]="msgVal" />
-</div>
+<router-outlet></router-outlet>

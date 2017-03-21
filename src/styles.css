@@ -1,18 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+
 body {
-    background-color:#242226;
-    padding-top: 5em;
+  background-color: #242226;
+  padding-top: 5em;
 }
+
 * {
-    font-family: 'Raleway';
+  font-family: 'Raleway';
 }
+
 button {
-    background:#4267B2;
-    color:white;
-    padding: 1.2em;
-    width:300px;
-    text-align:center;
-    font-size:1.2em;
-    margin-bottom: 30px;
-    cursor:pointer;
+  color: white;
+  padding: 1.2em;
+  width: 300px;
+  text-align: center;
+  font-size: 1.3em;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.form-container {
+    padding:3.5em;
+    width:500px;
+    position:fixed;
+    left:50%;
+    margin-left:-250px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top:1.2em;
+    }
+
+    .form-container {
+        padding:1.2em;
+        width:90%;
+        margin-left:-45%;
+    }
+    button {
+        font-size:1em;
+    }
 }
