@@ -40,6 +40,7 @@ export class AppComponent {
 //Logout method
   logout(){
     this.af.auth.logout()
+    location.reload()
   }
 
   chatSend(theirMessage: string){
